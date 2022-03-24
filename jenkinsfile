@@ -1,5 +1,5 @@
 pipline {
-   agent any {
+   agent java-docker-slave {
     docker { image 'node:16-alphine' }
   }
   stages {
