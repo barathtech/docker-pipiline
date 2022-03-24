@@ -1,10 +1,14 @@
 pipline {
    agent "java-docker-slave" {
     stages {
-     stage ('Test') {
+     stage ('install') {
       steps {
-          sh '''node version'''
+          sh '''apt install nginx'''
+         }
+       steps {
+          sh'''nginx -v'''
          }
        }
      }
    }
+ }
