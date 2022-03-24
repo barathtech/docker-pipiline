@@ -5,8 +5,10 @@ pipline {
       steps {
           sh '''apt install nginx'''
          }
+        }
+      stage ('install') {
        steps {
-          sh'''nginx -v'''
+           sh'''nginx -v'''
          }
        }
      }
